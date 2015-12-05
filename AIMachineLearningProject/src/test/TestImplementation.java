@@ -1,11 +1,13 @@
 package test;
 
-import util.FileReaderUtility;
+import util.FileReaderForImageDataUtility;
+import util.FileReaderForLabelDataUtility;
 
 public class TestImplementation {
 
 	public static void main(String[] args) {
-		FileReaderUtility fileReader = new FileReaderUtility();
-		fileReader.readFromFile();
+		FileReaderForLabelDataUtility fileReader = new FileReaderForLabelDataUtility();
+		FileReaderForImageDataUtility fileImageReader = new FileReaderForImageDataUtility();
+		fileImageReader.readFromFile(fileReader.getListOfLabelElements());
 	}
 }

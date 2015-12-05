@@ -2,12 +2,12 @@ package pojo;
 
 import java.util.List;
 
-public class Features {
+public class Features<T> {
 	private long featureId;
 	private String typeOfFeature;
 	private int label;
-	private List<Object> values;
-	private Object aggValues;
+	private List<T> values;
+	private T aggValues;
 	
 	public String getTypeOfFeature() {
 		return typeOfFeature;
@@ -21,16 +21,16 @@ public class Features {
 	public void setLabel(int label) {
 		this.label = label;
 	}
-	public List<Object> getValues() {
+	public List<T> getValues() {
 		return values;
 	}
-	public void setValues(List<Object> values) {
+	public void setValues(List<T> values) {
 		this.values = values;
 	}
-	public Object getAggValues() {
+	public T getAggValues() {
 		return aggValues;
 	}
-	public void setAggValues(Object aggValues) {
+	public void setAggValues(T aggValues) {
 		this.aggValues = aggValues;
 	}	
 	
